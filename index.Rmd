@@ -1,9 +1,382 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
-date: "`r Sys.Date()`"
+title: "HILDA Data Analysis Plan"
 site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
 ---
+# Research Objectives {#objectives}
+The current study aims to generate prevalence estimates using an Australian data set. Specifically, it it hypothesized that Australian's with hearing loss will have a higher prevalence of mental and substance use disorders than individuals without hearing loss.
 
-# Down the rabbit-hole
+## Primary Research Question
+1.  What is the prevalence of depression for individuals with hearing problems?
+2.  What is the prevalence of anxiety for individuals with hearing problems?
+3.  What is the alcohol consumption of individuals with hearing problems?
+4.  What is the tobacco/e-cigarette consumption of individuals with hearing loss?
+5.  What is the past-year prevalence of consuming [cocaine, ecstasy, hallucinogens, inhalants, cannabis, methamphetamine, opioids, tranquillisers] for individuals with hearing problems?
 
+## Secondary Research Questions
+6.  How does health-related quality of life (as measured on the SF-36) differ between individuals with hearing problems and the general population?
+7.  How does psychological distress (as measured on the K10) differ between individuals with hearing problems and the general population?
+
+## Hypotheses
+-   H1: The prevalence of mental disorders will be higher in individuals with hearing problems when compared to the general population.
+-   H2: Alcohol and tobacco/e-cigarette consumption will be higher in individuals with hearing problems when compared to the general population.
+-   H3: Past-year prevalence rates of illicit substance use will be higher in individuals with hearing problems when compared to the general population.
+-   H4: Health-related quality of life (as measured on the SF-36) will be lower in individuals with hearing problems when compared to the general population.
+-   H5: Psychological distress (as measured on the K10) will be higher in individuals with hearing problems when compared to the general population.
+
+
+# Data Description {#data}
+## HILDA Dataset
+### Waves Used
+-   Wave to be used: 21
+-   Years covered: 2021
+-   Rationale for wave selection: This wave is the most recent to collect data from participants on illicit substance use and mental health.
+
+### Sample Characteristics
+-   Target population: Individuals with hearing problems
+-   Inclusion criteria: Individuals who report 'hearing problems' as a long-term or disabling condition.
+-   Exclusion criteria: Individuals do not report 'hearing problems' as a long-term or disabling condition.
+-   Expected sample size: [TBD]{style="background-color: yellow;"}
+
+## Variables {#variables}
+### Outcome Variables - Mental Health
+
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| Variable Name                | HILDA Code                                                                                 | Type        | Description                               | Recoding Plan |
++:=============================+:===========================================================================================+:============+:==========================================+:==============+
+| Depression Diagnosis         | [uhedpn](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hedpn&&varw=21)     | Binary      | Diagnosis of depression                   | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| Anxiety Diagnosis            | [uheanx](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=heanx&&varw=21)     | Binary      | Diagnosis of anxiety                      | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| Depression/Anxiety Diagnosis | [uhedep](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hedep&&varw=21)     | Binary      | Diagnosis of either depression or anxiety | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| Psychological Distress       | [upddepr](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=pddepr&&varw=21)   | Binary      | Psychological distress - depressed        | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| K10 Risk Categories          | [updk10rc](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=pdk10rc&&varw=21) | Categorical | K10 risk categories                       | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| K10 Score                    | [updk10s](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=pdk10s&&varw=21)   | Continuous  | K10 score                                 | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Physical Functioning   | [ughpf](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghpf&&varw=21)       | Continuous  | SF-36 transf. physical functioning        | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, General Health         | [ughgh](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghgh&&varw=21)       | Continuous  | SF-36 transf. general health              | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Role-Emotional         | [ughre](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghre&&varw=21)       | Continuous  | SF-36 transf. role-emotional              | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Role-Physical          | [ughrp](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghrp&&varw=21)       | Continuous  | SF-36 transf. role-physical               | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Vitality               | [ughvt](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghvt&&varw=21)       | Continuous  | SF-36 transf. vitality                    | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Mental Health          | [ughmh](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghmh&&varw=21)       | Continuous  | SF-36 transf. vitality                    | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Bodily Pain            | [ughbp](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghbp&&varw=21)       | Continuous  | SF-36 transf. bodily pain                 | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+| SF36, Social Functioning     | [ughsf](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=ghsf&&varw=21)       | Continuous  | SF-36 transf. social functioning          | N/A           |
++------------------------------+--------------------------------------------------------------------------------------------+-------------+-------------------------------------------+---------------+
+
+### Outcome Variables - Substance Use
+
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Variable Name              | HILDA Code                                                                               | Type        | Description                                    | Recoding Plan   |
++:===========================+:=========================================================================================+:============+:===============================================+:================+
+| Alcohol Standards          | [ulsdrka](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lsdrka&&varw=21) | Continuous  | Standard drinks usually have per day           | [1] - [13.5]    |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [2] - [11.5]    |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [3] - [ 9.5]    |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [4] - [7.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [5] - [5.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [6] - [3.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [7] - [1.5]     |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Drinks Alcohol             | [ulsdrkf](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lsdrkf&&varw=21) | Categorical | Categorization of alcohol consumption          | [1] - [0]       |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [2] - [0]       |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [3] - [7]       |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [4] - [5.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [5] - [3.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [6] - [1.5]     |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [7] - [2.5\*12] |
+|                            |                                                                                          |             |                                                |                 |
+|                            |                                                                                          |             |                                                | [8] - [0]       |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Excessive Drinking         | [ulsdrex](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lsdrex&&varw=21) | Categorical | Frequency drinks exceed (sex-based) threshold  |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Smokes                     | [ulssmkf](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lssmkf&&varw=21) | Categorical | Categorization of tobacco consumption          |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| E-Cigarette Frequency      | [ulsecgf](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lsecgf&&varw=21) | Categorical | Frequency of e-cigarette use                   |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Cigarette Quantity         | [ulstbcn](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lstbcn&&varw=21) | Continuous  | Number of cigarettes usually smoked per week   |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Cannabis Frequency         | [udufmar](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufmar&&varw=21) | Categorical | Frequency of cannabis use (past year)          |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Meth/amphetamine Frequency | [udufmet](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufmet&&varw=21) | Categorical | Frequency of meth/amphetamine use (past year)  |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Cocaine Frequency          | [udufcoc](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufcoc&&varw=21) | Categorical | Frequency of cocaine use (past year)           |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Ecstasy Frequency          | [udufecs](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufecs&&varw=21) | Categorical | Frequency of ecstasy use (past year)           |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Hallucinogen Frequency     | [udufhal](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufhal&&varw=21) | Categorical | Frequency of hallucinogen use (past year)      |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Inhalants Frequency        | [udufinh](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufinh&&varw=21) | Categorical | Frequency of inhalant use (past year)          |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Other Drug Frequency       | [udufot](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufot&&varw=21)   | Categorical | Frequency of other illict drug use (past year) |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Opioid Frequency           | [udufppk](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufppk&&varw=21) | Categorical | Frequency of opioid use (past year)            |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+| Tranquiliser Frequency     | [udufpsp](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=dufpsp&&varw=21) | Categorical | Frequency of tranquiliser use (past year)      |                 |
++----------------------------+------------------------------------------------------------------------------------------+-------------+------------------------------------------------+-----------------+
+
+### Predictor Variables
+
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Variable Name            | HILDA Code                                                                                 | Type        | Description                                        | Recoding Plan |
++:=========================+:===========================================================================================+:============+:===================================================+:==============+
+| Hearing Problems         | [uhehear](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hehear&&varw=21)   | Binary      | Long-term or disabling hearing problem             | [-1] into [0] |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Hearing Problem Year     | [uhehearn](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hehearn&&varw=21) | Continuous  | Year that hearing problems first developed         | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Age                      | [uhgage](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hgage&&varw=21)     | Continuous  | Age at Wave 21                                     | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Sex                      | [uhgsex](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hgsex&&varw=21)     | Binary      | Recorded sex of participant                        | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Education                | [uedhigh1](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=edhigh1&&varw=21) | Categorical | Highest education level achieved                   | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Private Health Insurance | [uphpriin](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=phpriin&&varw=21) | Binary      | Current private health insurance                   | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Contacts GP              | [uhegpc](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=hegpc&&varw=21)     | Binary      | Sees a GP or clinic if sick or needs health advice | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+| Geographic Location      | [TBD]{style="background-color: yellow;"}                                                   | Categorical |                                                    | N/A           |
++--------------------------+--------------------------------------------------------------------------------------------+-------------+----------------------------------------------------+---------------+
+
+
+# Methods {#methods}
+## Data Preparation
+### Data Cleaning Steps
+**Missing data process:**
+*Imputation vs exclusion. Will need to discuss with Gab. It seems like most of the other papers use exclusatory methods.* 
+
+**Outlier identification and treatment:**
+*to discuss with Gab - check first what other HILDA papers have done*
+
+**Variable transformations:**
+N/A - no variables to be transformed
+
+**New variable creation:** 
+A variable to classify risky/problematic alcohol use (according to the NHMRC Guidelines) will be created. The current NHMRC Guideline for safe alcohol use is: *Healthy men and women should drink no more than 10 standard drinks a week, and no more than 4 standard drinks on any one day.*
+
+
+$$
+\text{standards/week} = \text{drinking occasions per week (ulsdrka_1)} \times \text{average standards per occasion (ulsdrka_1)}
+$$
+
+$$
+\text{standards/day} = \frac{\text{standards/week}}{7}
+$$
+
+$$
+\text{risky drinking (NHMRC)} = (\text{standards/week} > 10) | (\text{standards/day} > 4)
+$$
+
+## Primary Analysis
+1.  Variables for odds ratio calculation:
+    -   Outcome: mental health and substance use variables
+    -   Exposure: uhehear
+2.  Contingency table structure:
+3.  Calculation method:
+4.  Interpretation thresholds:
+
+## Secondary Analyses
+1.  Stratified analyses (if applicable): N/A
+2.  Subgroup analyses: NDIS Participants
+
+## Additional Statistical Methods
+1.  Sensitivity analyses:
+2.  Robustness checks:
+3.  Additional statistical tests:
+
+# Technical Details
+## Software
+-   Statistical package: STATA
+-   Version: 
+-   Key packages/modules:
+
+## Code Management
+-   Version control method: UQ RDM
+-   File naming conventions:
+-   Code documentation standards:
+
+# Statistical Analysis
+### Primary Analysis
+Crude odds ratios will be calculated for each mental health and substance use outcome
+
+### Secondary Analyses
+1. Stratified analyses: N/A
+2. Sensitivity analyses: N/A
+3. Subgroup analyses: NDIS Participation
+
+# Results {#results}
+## Planned Tables
+### Table 1 - Descriptives
+
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|                                       | Hearing Problems (n = 753)   | No Hearing Problems (n = 15,796)| Total (n = 16,549) |
++:======================================+=============================:+================================:+===================:+
+| Sex                                   |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Male                              | 735 (30.0%)                  | 1,312 (15.0%)                   | 2,047 (18.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Female                            | 1,715 (70.0%)                | 7,438 (85.0%)                   | 9,153 (81.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Age                                   |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     20-29                             | 858 (35.0%)                  | 1,750 (20.0%)                   | 2,608 (23.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     30-39                             | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     40-49                             | 858 (35.0%)                  | 1,750 (20.0%)                   | 2,608 (23.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     50-59                             | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     60-69                             | 858 (35.0%)                  | 1,750 (20.0%)                   | 2,608 (23.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     70-79                             | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     80+.                              | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Education                             |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Year 11 and below                 | 612 (25.0%)                  | 875 (10.0%)                     | 1,487 (13.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Year 12                           | 1,838 (75.0%)                | 7,875 (90.0%)                   | 9,713 (86.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Certificate or Diploma            | 612 (25.0%)                  | 875 (10.0%)                     | 1,487 (13.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Bachelor Degree or Higher         | 1,838 (75.0%)                | 7,875 (90.0%)                   | 9,713 (86.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Private Health Insurance              |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 368 (15.0%)                  | 962 (11.0%)                     | 1,330 (11.9%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 2,082 (85.0%)                | 7,788 (89.0%)                   | 9,870 (88.1%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Visits GP when sick                   |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 294 (12.0%)                  | 787 (9.0%)                      | 1,081 (9.7%)       |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 2,156 (88.0%)                | 7,963 (91.0%)                   | 10,119 (90.3%)     |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Geographic Location                   |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Urban                             | 441 (18.0%)                  | 700 (8.0%)                      | 1,141 (10.2%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Rural                             | 2,009 (82.0%)                | 8,050 (92.0%)                   | 10,059 (89.8%)     |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Duration of hearing problems (M, SD)  | 8.5 (3.58)                   |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+
+### Table 2 - Main Results
+
+### Table 3 - Subgroup Analyses
+
+
+
+
+## Planned Figures
+1. Flow diagram
+2. Forest plots
+3. Additional visualizations
+
+
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Mental Health/Substance Use Variables | Hearing Problems (n = 2,450) | No Hearing Problems (n = 8,750) | Total (n = 11,200) |
++:======================================+=============================:+================================:+===================:+
+| Depression                            |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 735 (30.0%)                  | 1,312 (15.0%)                   | 2,047 (18.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 1,715 (70.0%)                | 7,438 (85.0%)                   | 9,153 (81.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Anxiety                               |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 858 (35.0%)                  | 1,750 (20.0%)                   | 2,608 (23.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Psychological Distress (K10)          |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     High/Very High                    | 612 (25.0%)                  | 875 (10.0%)                     | 1,487 (13.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Low/Moderate                      | 1,838 (75.0%)                | 7,875 (90.0%)                   | 9,713 (86.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Alcohol Use Disorder                  |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 368 (15.0%)                  | 962 (11.0%)                     | 1,330 (11.9%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 2,082 (85.0%)                | 7,788 (89.0%)                   | 9,870 (88.1%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Substance Use                         |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 294 (12.0%)                  | 787 (9.0%)                      | 1,081 (9.7%)       |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 2,156 (88.0%)                | 7,963 (91.0%)                   | 10,119 (90.3%)     |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Suicidal Ideation                     |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 441 (18.0%)                  | 700 (8.0%)                      | 1,141 (10.2%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 2,009 (82.0%)                | 8,050 (92.0%)                   | 10,059 (89.8%)     |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+| Mental Health Service Use             |                              |                                 |                    |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     Yes                               | 858 (35.0%)                  | 1,750 (20.0%)                   | 2,608 (23.3%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+|     No                                | 1,592 (65.0%)                | 7,000 (80.0%)                   | 8,592 (76.7%)      |
++---------------------------------------+------------------------------+---------------------------------+--------------------+
+
+*Note: Percentages are column percentages. Numbers are example data only.*
+
+# Discussion {#discussion}
+## Interpretation Guidelines
+1. Effect size interpretation:
+2. Clinical significance:
+3. Public health implications:
+
+## Limitations
+1. Dataset limitations:
+2. Methodological limitations:
+3. Analytical limitations:
+
+### Contingency Plans
+1.  Sample size issues:
+2.  Missing data problems:
+3.  Technical challenges:
+
+# References {#references}
+
+# Appendices {#appendices}
+## Timeline
+
+| Phase             | Start Date | End Date | Deliverables |
+|:------------------|:-----------|:---------|:-------------|
+| Data Preparation  |            |          |              |
+| Initial Analysis  |            |          |              |
+| Review & Revision |            |          |              |
+| Final Analysis    |            |          |              |
+
+## Code Repository
+All analysis code will be stored at:
+
+## Variable Details
+For full HILDA variable details:
+- [ulsdrka](https://hildaodd.app.unimelb.edu.au/VariableDetails.aspx?varn=lsdrka&&varw=21)
+- [Additional variables...]
